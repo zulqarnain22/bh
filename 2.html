@@ -408,9 +408,9 @@
 
         .results-header {
             background: #ffffff;
-            padding: 48px 40px;
+            padding: 32px 40px;
             border-radius: 0;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
             box-shadow: none;
             color: #0f172a;
             text-align: center;
@@ -434,7 +434,7 @@
             background: white;
             border-radius: 12px;
             padding: 0;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
             transition: all 0.2s;
@@ -487,16 +487,16 @@
 
         .provider-card-body {
             display: grid;
-            grid-template-columns: 200px 1fr 240px;
-            gap: 32px;
-            padding: 32px;
+            grid-template-columns: 200px 1fr 200px;
+            gap: 24px;
+            padding: 24px 28px;
             align-items: start;
         }
 
         .provider-logo-section {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 10px;
         }
 
         .provider-name {
@@ -530,22 +530,22 @@
         .provider-features {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .provider-features-list {
             list-style: none;
             padding: 0;
-            margin: 0 0 20px 0;
+            margin: 0 0 16px 0;
         }
 
         .provider-features-list li {
-            padding: 8px 0;
+            padding: 6px 0;
             padding-left: 28px;
             position: relative;
             color: #0f172a;
             font-size: 0.9375rem;
-            line-height: 1.5;
+            line-height: 1.4;
             font-weight: 500;
         }
 
@@ -562,45 +562,45 @@
             text-align: right;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 8px;
         }
 
         .provider-price-label {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: #0f172a;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .provider-price {
             font-size: 2.5rem;
             color: #0f172a;
             font-weight: 800;
-            margin-bottom: 4px;
+            margin-bottom: 0;
             letter-spacing: -0.03em;
             line-height: 1;
         }
 
         .provider-price-period {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: #64748b;
             font-weight: 500;
         }
 
         .provider-section {
-            margin: 20px 0;
+            margin: 0;
         }
 
         .provider-section h4 {
-            font-size: 1.0625rem;
-            margin-bottom: 12px;
+            font-size: 1rem;
+            margin-bottom: 8px;
             color: #0f172a;
             font-weight: 700;
         }
 
         .provider-section p {
             color: #475569;
-            line-height: 1.7;
+            line-height: 1.5;
             font-size: 0.9375rem;
         }
 
@@ -629,11 +629,12 @@
 
         .provider-details {
             grid-column: 1 / -1;
-            padding-top: 24px;
+            padding-top: 16px;
+            margin-top: 16px;
             border-top: 1px solid #e2e8f0;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 24px;
+            gap: 20px;
         }
 
         .provider-cta-section {
@@ -641,7 +642,8 @@
             display: flex;
             gap: 12px;
             justify-content: center;
-            padding-top: 24px;
+            padding-top: 16px;
+            margin-top: 16px;
             border-top: 1px solid #e2e8f0;
         }
 
@@ -693,13 +695,79 @@
         .summary-table {
             background: white;
             border-radius: 12px;
-            padding: 32px;
-            margin: 32px 0;
+            padding: 28px;
+            margin: 28px 0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
         }
 
         .summary-table h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+        }
+
+        .summary-table p {
+            margin-bottom: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #0f172a;
+            color: white;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.02em;
+        }
+
+        tbody tr {
+            background: white;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background: #eff6ff;
+        }
+
+        td:last-child {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-section h3 {
             font-size: 1.5rem;
             margin-bottom: 20px;
             font-weight: 700;
@@ -707,55 +775,9 @@
             letter-spacing: -0.01em;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 14px 12px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        th {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #475569;
-            font-size: 0.8125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background: #f8fafc;
-        }
-
-        .faq-section {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            margin: 32px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
-        }
-
-        .faq-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 24px;
-            font-weight: 700;
-            color: #0f172a;
-            letter-spacing: -0.01em;
-        }
-
         .faq-item {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #e2e8f0;
         }
 
@@ -766,15 +788,15 @@
         }
 
         .faq-item h4 {
-            font-size: 1.0625rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 8px;
             color: #0f172a;
             font-weight: 600;
         }
 
         .faq-item p {
             color: #475569;
-            line-height: 1.6;
+            line-height: 1.5;
             font-size: 0.9375rem;
         }
 
@@ -782,22 +804,22 @@
             background: #f8fafc;
             color: #0f172a;
             border-radius: 12px;
-            padding: 48px 40px;
+            padding: 36px 32px;
             text-align: center;
-            margin: 40px 0;
+            margin: 28px 0;
             border: 1px solid #e2e8f0;
         }
 
         .final-cta h3 {
-            font-size: 1.75rem;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             font-weight: 700;
             letter-spacing: -0.01em;
         }
 
         .final-cta p {
-            font-size: 1.0625rem;
-            margin-bottom: 28px;
+            font-size: 1rem;
+            margin-bottom: 20px;
             color: #475569;
         }
 
@@ -1289,10 +1311,8 @@
                         </div>
 
                         <div class="provider-price-section">
-                            <div class="provider-price-label">$5,000</div>
-                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
                             <div class="provider-price">$164<span class="provider-price-period">/mo</span></div>
-                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 8px;">(effective rate)</div>
+                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 4px;">(effective rate)</div>
                         </div>
 
                         <div class="provider-details">
@@ -1347,8 +1367,6 @@
                         </div>
 
                         <div class="provider-price-section">
-                            <div class="provider-price-label">$5,000</div>
-                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
                             <div class="provider-price">$179<span class="provider-price-period">/mo</span></div>
                         </div>
 
@@ -1393,8 +1411,6 @@
                         </div>
 
                         <div class="provider-price-section">
-                            <div class="provider-price-label">$5,000</div>
-                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
                             <div class="provider-price">$249<span class="provider-price-period">/mo</span></div>
                         </div>
 
@@ -1422,10 +1438,8 @@
                         </div>
 
                         <div class="provider-price-section">
-                            <div class="provider-price-label">$5,388</div>
-                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Cost</div>
                             <div class="provider-price">$449<span class="provider-price-period">/mo</span></div>
-                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 8px;">(+ $249 enrollment fee)</div>
+                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 4px;">(+ $249 enrollment fee)</div>
                         </div>
 
                         <div class="provider-cta-section">
