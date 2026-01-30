@@ -433,65 +433,158 @@
         .provider-card {
             background: white;
             border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 0;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
-            transition: all 0.15s;
+            transition: all 0.2s;
+            overflow: hidden;
         }
 
         .provider-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
 
         .provider-card.rank-1 {
             border-color: #10b981;
-            box-shadow: 0 1px 3px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
         }
 
         .provider-card.rank-2 {
-            border-color: #cbd5e1;
+            border-color: #3b82f6;
         }
 
         .rank-badge {
             display: inline-block;
-            background: #f1f5f9;
-            color: #0f172a;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: 0.05em;
+            background: #0f172a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 0;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
+            position: relative;
         }
 
         .rank-badge.best {
-            background: #dcfce7;
-            color: #166534;
+            background: #0f172a;
+            color: #fbbf24;
+        }
+
+        .rank-badge::after {
+            content: '⭐⭐⭐⭐⭐';
+            margin-left: 10px;
+            color: #fbbf24;
+            font-size: 0.75rem;
+        }
+
+        .provider-card-header {
+            padding: 0;
+            background: #0f172a;
+            margin-bottom: 0;
+        }
+
+        .provider-card-body {
+            display: grid;
+            grid-template-columns: 200px 1fr 240px;
+            gap: 32px;
+            padding: 32px;
+            align-items: start;
+        }
+
+        .provider-logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
         .provider-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0;
             color: #0f172a;
-            letter-spacing: -0.01em;
-        }
-
-        .provider-price {
-            font-size: 2rem;
-            color: #0f172a;
-            font-weight: 700;
-            margin-bottom: 12px;
             letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
         .provider-rating {
             color: #f59e0b;
-            margin-bottom: 20px;
+            margin: 8px 0;
             font-size: 0.9375rem;
-            font-weight: 400;
+            font-weight: 500;
+        }
+
+        .provider-review-quote {
+            font-style: italic;
+            color: #0f172a;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 12px 0;
+            padding: 16px;
+            background: #f8fafc;
+            border-left: 3px solid #3b82f6;
+            border-radius: 4px;
+        }
+
+        .provider-features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .provider-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .provider-features-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #0f172a;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .provider-features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .provider-price-section {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .provider-price-label {
+            font-size: 1.125rem;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .provider-price {
+            font-size: 2.5rem;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 4px;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .provider-price-period {
+            font-size: 1.125rem;
+            color: #64748b;
+            font-weight: 500;
         }
 
         .provider-section {
@@ -499,27 +592,30 @@
         }
 
         .provider-section h4 {
-            font-size: 1.15rem;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-            font-weight: 600;
+            font-size: 1.0625rem;
+            margin-bottom: 12px;
+            color: #0f172a;
+            font-weight: 700;
         }
 
-        .provider-section p,
-        .provider-section ul {
-            color: #4b5563;
+        .provider-section p {
+            color: #475569;
             line-height: 1.7;
+            font-size: 0.9375rem;
         }
 
         .provider-section ul {
             list-style: none;
             padding-left: 0;
+            margin: 0;
         }
 
         .provider-section ul li {
-            padding: 5px 0;
-            padding-left: 25px;
+            padding: 6px 0;
+            padding-left: 28px;
             position: relative;
+            color: #475569;
+            font-size: 0.9375rem;
         }
 
         .provider-section ul li:before {
@@ -528,6 +624,25 @@
             left: 0;
             color: #10b981;
             font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .provider-details {
+            grid-column: 1 / -1;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        .provider-cta-section {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
         }
 
         .provider-cta {
@@ -807,6 +922,38 @@
 
             .final-cta p {
                 font-size: 1rem;
+            }
+
+            .provider-card-body {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 24px;
+            }
+
+            .provider-price-section {
+                text-align: left;
+            }
+
+            .provider-details {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .provider-cta-section {
+                flex-direction: column;
+            }
+
+            .provider-cta-section a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .provider-name {
+                font-size: 1.5rem;
+            }
+
+            .provider-price {
+                font-size: 2rem;
             }
         }
     </style>
@@ -1115,100 +1262,176 @@
 
                 <!-- Provider #1 -->
                 <div class="provider-card rank-1">
-                    <span class="rank-badge best">#1 BEST VALUE</span>
-                    <div class="provider-name">Blue Haven RX</div>
-                    <div class="provider-price">$164/month <span style="font-size: 1rem; color: #6b7280;">(effective rate)</span></div>
-                    <div class="provider-rating">⭐⭐⭐⭐⭐ 4.9 (1,247 reviews)</div>
-
-                    <div class="provider-section">
-                        <h4>Why they rank #1 for you:</h4>
-                        <p>You said price was your priority - Blue Haven has the lowest effective monthly cost we've tracked for tirzepatide in California. They're a family-owned telehealth pharmacy that keeps overhead low and passes savings on. Their pricing is straightforward with no hidden fees.</p>
+                    <div class="provider-card-header">
+                        <span class="rank-badge best">BEST GLP-1 PRICING</span>
                     </div>
+                    <div class="provider-card-body">
+                        <div class="provider-logo-section">
+                            <div class="provider-name">Blue Haven RX</div>
+                            <div class="provider-rating">⭐⭐⭐⭐⭐ 4.9 (1,247 reviews)</div>
+                            <div class="provider-review-quote">
+                                "I highly recommend it. It is affordable and reliable."
+                            </div>
+                        </div>
 
-                    <div class="provider-section">
-                        <h4>What's included:</h4>
-                        <ul>
-                            <li>Compounded tirzepatide, same active ingredient as Zepbound®</li>
-                            <li>Licensed physician consultation</li>
-                            <li>Ongoing support via text or call</li>
-                            <li>Free shipping</li>
-                        </ul>
+                        <div class="provider-features">
+                            <ul class="provider-features-list">
+                                <li>Compounded tirzepatide, same active ingredient as Zepbound®</li>
+                                <li>Licensed physician consultation</li>
+                                <li>Ongoing support via text or call</li>
+                                <li>Free shipping</li>
+                            </ul>
+
+                            <div class="provider-section">
+                                <h4>Why they rank #1 for you:</h4>
+                                <p>You said price was your priority - Blue Haven has the lowest effective monthly cost we've tracked for tirzepatide in California. They're a family-owned telehealth pharmacy that keeps overhead low and passes savings on. Their pricing is straightforward with no hidden fees.</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-price-section">
+                            <div class="provider-price-label">$5,000</div>
+                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
+                            <div class="provider-price">$164<span class="provider-price-period">/mo</span></div>
+                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 8px;">(effective rate)</div>
+                        </div>
+
+                        <div class="provider-details">
+                            <div class="provider-section">
+                                <h4>What we like:</h4>
+                                <p>The pricing is genuinely the lowest we've found for comparable quality. They've been around for a while and have a loyal customer base. No subscription traps - you can pause or cancel anytime.</p>
+                            </div>
+
+                            <div class="provider-section">
+                                <h4>What to know:</h4>
+                                <p>Smaller operation than some bigger names. If you want a super polished app experience, look elsewhere. But if you want the best price from real people who answer the phone, this is it.</p>
+                            </div>
+
+                            <div class="provider-section">
+                                <p style="font-weight: 600; color: #0f172a;">More medication options? Compare multiple providers.</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-cta-section">
+                            <a href="#" class="provider-cta secondary" style="padding: 14px 32px; font-size: 0.9375rem;">See What's Covered</a>
+                            <a href="#" class="provider-cta" style="padding: 14px 32px; font-size: 0.9375rem;">VISIT BLUE HAVEN RX</a>
+                        </div>
                     </div>
-
-                    <div class="provider-section">
-                        <h4>What we like:</h4>
-                        <p>The pricing is genuinely the lowest we've found for comparable quality. They've been around for a while and have a loyal customer base. No subscription traps - you can pause or cancel anytime.</p>
-                    </div>
-
-                    <div class="provider-section">
-                        <h4>What to know:</h4>
-                        <p>Smaller operation than some bigger names. If you want a super polished app experience, look elsewhere. But if you want the best price from real people who answer the phone, this is it.</p>
-                    </div>
-
-                    <a href="#" class="provider-cta">Visit Blue Haven RX →</a>
                 </div>
 
                 <!-- Provider #2 -->
                 <div class="provider-card rank-2">
-                    <span class="rank-badge">#2 STRONG ALTERNATIVE</span>
-                    <div class="provider-name">Harper Meds</div>
-                    <div class="provider-price">$179/month</div>
-                    <div class="provider-rating">⭐⭐⭐⭐⭐ 4.8 (892 reviews)</div>
-
-                    <div class="provider-section">
-                        <h4>Why they rank #2 for you:</h4>
-                        <p>Very close on price and they have a slightly faster approval process (most patients get prescribed within 4 hours). Founded by pharmacists, so they know their stuff. Only $15/month more than #1.</p>
+                    <div class="provider-card-header">
+                        <span class="rank-badge">FAST APPROVAL OPTION</span>
                     </div>
+                    <div class="provider-card-body">
+                        <div class="provider-logo-section">
+                            <div class="provider-name">Harper Meds</div>
+                            <div class="provider-rating">⭐⭐⭐⭐⭐ 4.8 (892 reviews)</div>
+                            <div class="provider-review-quote">
+                                "Easy to claim online and responsive customer service."
+                            </div>
+                        </div>
 
-                    <div class="provider-section">
-                        <h4>What's included:</h4>
-                        <ul>
-                            <li>Compounded tirzepatide</li>
-                            <li>Same-day physician review</li>
-                            <li>Direct pharmacist access</li>
-                            <li>Free priority shipping</li>
-                        </ul>
+                        <div class="provider-features">
+                            <ul class="provider-features-list">
+                                <li>Compounded tirzepatide</li>
+                                <li>Same-day physician review</li>
+                                <li>Direct pharmacist access</li>
+                                <li>Free priority shipping</li>
+                            </ul>
+
+                            <div class="provider-section">
+                                <h4>Why they rank #2 for you:</h4>
+                                <p>Very close on price and they have a slightly faster approval process (most patients get prescribed within 4 hours). Founded by pharmacists, so they know their stuff. Only $15/month more than #1.</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-price-section">
+                            <div class="provider-price-label">$5,000</div>
+                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
+                            <div class="provider-price">$179<span class="provider-price-period">/mo</span></div>
+                        </div>
+
+                        <div class="provider-details">
+                            <div class="provider-section">
+                                <h4>What we like:</h4>
+                                <p>The pharmacist-founded angle is legit - you can actually talk to someone who understands the medication. Their onboarding is smooth and fast.</p>
+                            </div>
+
+                            <div class="provider-section">
+                                <h4>What to know:</h4>
+                                <p>Newer company than some competitors. Growing fast but less track record than established players.</p>
+                            </div>
+
+                            <div class="provider-section">
+                                <p style="font-weight: 600; color: #0f172a;">10% multi-medication discount available</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-cta-section">
+                            <a href="#" class="provider-cta secondary" style="padding: 14px 32px; font-size: 0.9375rem;">See What's Covered</a>
+                            <a href="#" class="provider-cta" style="padding: 14px 32px; font-size: 0.9375rem;">VISIT HARPER MEDS</a>
+                        </div>
                     </div>
-
-                    <div class="provider-section">
-                        <h4>What we like:</h4>
-                        <p>The pharmacist-founded angle is legit - you can actually talk to someone who understands the medication. Their onboarding is smooth and fast.</p>
-                    </div>
-
-                    <div class="provider-section">
-                        <h4>What to know:</h4>
-                        <p>Newer company than some competitors. Growing fast but less track record than established players.</p>
-                    </div>
-
-                    <a href="#" class="provider-cta secondary">Visit Harper Meds →</a>
                 </div>
 
                 <!-- Provider #3 -->
                 <div class="provider-card">
-                    <span class="rank-badge">#3 ALSO AVAILABLE</span>
-                    <div class="provider-name">Remedy Meds</div>
-                    <div class="provider-price">$249/month</div>
-                    <div class="provider-rating">⭐⭐⭐⭐ 4.6 (2,103 reviews)</div>
-
-                    <div class="provider-section">
-                        <p>Established provider with a big customer base. Good reputation and reliable service. You're paying more for brand recognition and a polished experience. Solid choice if budget isn't your main concern.</p>
+                    <div class="provider-card-header">
+                        <span class="rank-badge">ESTABLISHED PROVIDER</span>
                     </div>
+                    <div class="provider-card-body">
+                        <div class="provider-logo-section">
+                            <div class="provider-name">Remedy Meds</div>
+                            <div class="provider-rating">⭐⭐⭐⭐ 4.6 (2,103 reviews)</div>
+                        </div>
 
-                    <a href="#" class="provider-cta text-link">Learn More →</a>
+                        <div class="provider-features">
+                            <div class="provider-section">
+                                <p>Established provider with a big customer base. Good reputation and reliable service. You're paying more for brand recognition and a polished experience. Solid choice if budget isn't your main concern.</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-price-section">
+                            <div class="provider-price-label">$5,000</div>
+                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Coverage</div>
+                            <div class="provider-price">$249<span class="provider-price-period">/mo</span></div>
+                        </div>
+
+                        <div class="provider-cta-section">
+                            <a href="#" class="provider-cta text-link" style="padding: 14px 32px;">Learn More →</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Provider #4 -->
                 <div class="provider-card">
-                    <span class="rank-badge">#4</span>
-                    <div class="provider-name">Calibrate Health</div>
-                    <div class="provider-price">$449/month <span style="font-size: 1rem; color: #6b7280;">(+ $249 enrollment fee)</span></div>
-                    <div class="provider-rating">⭐⭐⭐⭐ 4.4 (567 reviews)</div>
-
-                    <div class="provider-section">
-                        <p>Premium "metabolic health program" that includes coaching, nutrition planning, and extensive support. The medication itself isn't better - you're paying for the white-glove experience. Worth it for some people, but you said price was your priority.</p>
+                    <div class="provider-card-header">
+                        <span class="rank-badge">PREMIUM PROGRAM</span>
                     </div>
+                    <div class="provider-card-body">
+                        <div class="provider-logo-section">
+                            <div class="provider-name">Calibrate Health</div>
+                            <div class="provider-rating">⭐⭐⭐⭐ 4.4 (567 reviews)</div>
+                        </div>
 
-                    <a href="#" class="provider-cta text-link">Learn More →</a>
+                        <div class="provider-features">
+                            <div class="provider-section">
+                                <p>Premium "metabolic health program" that includes coaching, nutrition planning, and extensive support. The medication itself isn't better - you're paying for the white-glove experience. Worth it for some people, but you said price was your priority.</p>
+                            </div>
+                        </div>
+
+                        <div class="provider-price-section">
+                            <div class="provider-price-label">$5,388</div>
+                            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 16px;">Annual Cost</div>
+                            <div class="provider-price">$449<span class="provider-price-period">/mo</span></div>
+                            <div style="font-size: 0.8125rem; color: #64748b; margin-top: 8px;">(+ $249 enrollment fee)</div>
+                        </div>
+
+                        <div class="provider-cta-section">
+                            <a href="#" class="provider-cta text-link" style="padding: 14px 32px;">Learn More →</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Summary Table -->
