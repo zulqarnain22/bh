@@ -238,7 +238,7 @@
         .option {
             display: flex;
             align-items: center;
-            padding: 24px 28px;
+            padding: 22px 70px 22px 24px;
             margin-bottom: 16px;
             border: 2px solid #e5e7eb;
             border-radius: 16px;
@@ -258,21 +258,25 @@
 
         .option input[type="radio"] {
             position: absolute;
-            right: 28px;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
             cursor: pointer;
             accent-color: #3b82f6;
+            flex-shrink: 0;
         }
 
         .option-icon {
             font-size: 2rem;
-            margin-right: 20px;
+            margin-right: 18px;
             flex-shrink: 0;
         }
 
         .option-content {
             flex: 1;
+            min-width: 0;
         }
 
         .option-title {
@@ -280,11 +284,13 @@
             font-weight: 600;
             color: #1a1a1a;
             margin-bottom: 4px;
+            word-wrap: break-word;
         }
 
         .option-subtitle {
             font-size: 0.95rem;
             color: #6b7280;
+            word-wrap: break-word;
         }
 
         .helper-text {
@@ -825,8 +831,14 @@
             }
 
             .option {
-                padding: 16px;
+                padding: 16px 60px 16px 16px;
                 margin-bottom: 10px;
+            }
+
+            .option input[type="radio"] {
+                right: 16px;
+                width: 22px;
+                height: 22px;
             }
 
             .option-icon {
