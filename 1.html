@@ -40,9 +40,10 @@
 
         /* Landing Page */
         .landing {
+            position: relative;
             text-align: center;
-            padding: 80px 40px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 100px 40px 120px;
+            background: #f8fafc;
             border-radius: 0;
             box-shadow: none;
             margin-top: 0;
@@ -50,77 +51,121 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: white;
+            color: #0f172a;
+            overflow: hidden;
+        }
+
+        .landing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .landing::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle at 70% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .landing > * {
+            position: relative;
+            z-index: 1;
         }
 
         .landing h1 {
-            font-size: 3.5rem;
-            margin-bottom: 24px;
-            color: white;
-            line-height: 1.2;
+            font-size: 3.75rem;
+            margin-bottom: 28px;
+            color: #0f172a;
+            line-height: 1.1;
             font-weight: 800;
-        }
-
-        .landing h2 {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 400;
-            margin-bottom: 50px;
-            max-width: 700px;
+            letter-spacing: -0.03em;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .landing .body-copy {
-            text-align: left;
-            max-width: 650px;
-            margin: 0 auto 50px;
-            color: rgba(255, 255, 255, 0.95);
-            background: rgba(255, 255, 255, 0.15);
-            padding: 40px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .landing h1 .highlight {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .landing .body-copy h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: white;
-            font-weight: 700;
-        }
-
-        .landing .body-copy p {
-            margin-bottom: 18px;
-            font-size: 1.1rem;
+        .landing h2 {
+            font-size: 1.4rem;
+            color: #475569;
+            font-weight: 400;
+            margin-bottom: 56px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
             line-height: 1.7;
         }
 
-        .cta-button {
+        .landing .body-copy {
+            text-align: left;
+            max-width: 720px;
+            margin: 0 auto 56px;
             background: white;
-            color: #1e3a8a;
-            border: none;
-            padding: 20px 60px;
-            font-size: 1.2rem;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .landing .body-copy h3 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            color: #0f172a;
             font-weight: 700;
-            border-radius: 50px;
+            letter-spacing: -0.02em;
+        }
+
+        .landing .body-copy p {
+            margin-bottom: 20px;
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .landing .body-copy p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            padding: 18px 56px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             display: inline-block;
             text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
-            background: #f0f7ff;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35), 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .trust-line {
-            margin-top: 24px;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1rem;
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.9375rem;
         }
 
         /* Quiz Questions */
@@ -343,30 +388,50 @@
 
         /* Calculating Page */
         .calculating {
+            position: relative;
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: #f8fafc;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+        }
+
+        .calculating::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .calculating > * {
+            position: relative;
+            z-index: 1;
         }
 
         .calculating h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 40px;
+            font-size: 2.25rem;
+            color: #0f172a;
+            margin-bottom: 48px;
             font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .loader {
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            border-top: 5px solid white;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #3b82f6;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            animation: spin 1s linear infinite;
+            width: 64px;
+            height: 64px;
+            animation: spin 0.8s linear infinite;
             margin: 0 auto 40px;
         }
 
@@ -376,9 +441,9 @@
         }
 
         .calculating-text {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.95);
-            min-height: 40px;
+            font-size: 1.125rem;
+            color: #475569;
+            min-height: 36px;
             font-weight: 500;
         }
 
@@ -390,25 +455,39 @@
         }
 
         .results-header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 60px 40px;
-            border-radius: 20px;
+            background: white;
+            padding: 56px 40px;
+            border-radius: 16px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
-            color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+            color: #0f172a;
             text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
         }
 
         .results-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: white;
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+            color: #0f172a;
             font-weight: 800;
+            letter-spacing: -0.02em;
         }
 
         .results-banner {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 1.05rem;
+            color: #64748b;
+            font-size: 1rem;
         }
 
         .provider-card {
@@ -636,50 +715,62 @@
         }
 
         .final-cta {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            border-radius: 24px;
-            padding: 60px 40px;
+            position: relative;
+            background: white;
+            color: #0f172a;
+            border-radius: 20px;
+            padding: 56px 40px;
             text-align: center;
             margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
         }
 
         .final-cta h3 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 16px;
             font-weight: 800;
+            letter-spacing: -0.02em;
         }
 
         .final-cta p {
-            font-size: 1.3rem;
+            font-size: 1.125rem;
             margin-bottom: 32px;
-            opacity: 0.95;
+            color: #475569;
         }
 
         .final-cta .cta-button {
-            background: white;
-            color: #1e3a8a;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
             margin-right: 0;
-            font-size: 1.15rem;
-            padding: 18px 50px;
+            font-size: 1.125rem;
+            padding: 18px 56px;
         }
 
         .final-cta .cta-button:hover {
-            background: #f0f9ff;
-            color: #1e3a8a;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         .final-cta a {
-            color: white;
-            text-decoration: underline;
-            opacity: 0.9;
-            font-size: 1.05rem;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9375rem;
         }
 
         .final-cta a:hover {
-            opacity: 1;
+            color: #0f172a;
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -772,7 +863,7 @@
     <div id="landing" class="section active">
         <div class="container">
             <div class="landing">
-                <h1>Find the Lowest Price for Your GLP-1 Medication in <span id="userState">Your State</span></h1>
+                <h1>Find the <span class="highlight">Lowest Price</span> for Your GLP-1 Medication in <span id="userState">Your State</span></h1>
                 <h2>We track pricing from 27 telehealth providers so you don't have to. Answer 4 quick questions and we'll show you who has the best deal for your specific situation.</h2>
                 
                 <div class="body-copy">
